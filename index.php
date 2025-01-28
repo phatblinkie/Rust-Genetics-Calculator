@@ -16,6 +16,7 @@
     <meta name="twitter:image" content="http://wigaun.eu.org/genetics/rust.jpg">
 
     <title>Rust Genetics Calculator</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -148,8 +149,9 @@
                 <!-- List of crops - hidden on default -->
                 <div id="my-crops" hidden>
                     <hr>
-                    <h3 class="d-inline-block">My crops</h3>
-                    <button type="button" class="btn btn-del mb-2 ml-3" onclick="if(confirm('Are you sure you want to clear all current crops'))clearCrops()">Clear</button>
+                    <h3 class="d-inline-block" id="crop-title">My crops</h3>
+                    <button type="button" class="btn btn-del mb-2 ml-3" onclick="renameTitle()" title="Rename this list">📑</button>
+                    <button type="button" class="btn btn-del btn-del-h mb-2 ml-0" onclick="if(confirm('Are you sure you want to clear all current crops'))clearCrops()">Clear</button>
                     <ul id="crop-list" class="mt-2">
     
                     </ul>
